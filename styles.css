@@ -108,6 +108,48 @@ h3 {
     display: block;
 }
 
+.new-game-popup {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.new-game-popup.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.new-game-popup h2 {
+    margin: 0;
+}
+
+#new-game-button {
+    all: unset;
+    background-color: var(--secondary-color);
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: var(--box-shadow2);
+    transition: 0.3s ease all;
+}
+
+#new-game-button:hover {
+    box-shadow: none;
+    background-color: white;
+}
+
 @media (max-width: 768px) {
     #container {
         width: 80vw;
